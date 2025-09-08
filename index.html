@@ -202,6 +202,12 @@
       once: false  // animations repeat on scroll
     });
 
+    if(window.innerWidth < 768){
+  AOS.init({duration:800, once:true});
+} else {
+  AOS.init({duration:800, once:false});
+}
+
     function toggleMenu(){document.getElementById('navLinks').classList.toggle('showing');}
 
     const galleryImages = document.querySelectorAll('.gallery-grid img');
@@ -223,3 +229,4 @@
   </script>
 </body>
 </html>
+
