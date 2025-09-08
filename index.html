@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-Cell</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
-  <!-- AOS CSS -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <style>
     :root {
@@ -14,9 +13,17 @@
       --text: #333;
       --bg: #fff;
     }
+
     * {margin:0; padding:0; box-sizing:border-box;}
+    html, body {overflow-x: hidden;} /* remove horizontal scroll */
     body {font-family:'Inter', sans-serif; color:var(--text); background:var(--bg); line-height:1.6;}
-    header {position:fixed; top:0; left:0; width:100%; background:rgba(255,255,255,0.95); backdrop-filter: blur(6px); box-shadow:0 2px 6px rgba(0,0,0,0.05); z-index:1000;}
+
+    header {
+      position:fixed; top:0; left:0; width:100%; 
+      background:rgba(255,255,255,0.95); backdrop-filter: blur(6px); 
+      box-shadow:0 2px 6px rgba(0,0,0,0.05); z-index:1000;
+    }
+
     nav {max-width:1100px; margin:auto; display:flex; justify-content:space-between; align-items:center; padding:1rem 2rem;}
     nav a.logo {font-family:'Montserrat', sans-serif; font-size:1.5rem; font-weight:700; color:var(--primary); text-decoration:none;}
     nav ul {list-style:none; display:flex; gap:1.5rem;}
@@ -52,12 +59,10 @@
     .contact-form button:hover {background:#1259a5;}
     .contact-map iframe {width:100%; height:300px; border:0; border-radius:12px;}
 
-    /* Gallery */
     .gallery-grid {display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:1rem;}
     .gallery-grid img {width:100%; height:150px; object-fit:cover; cursor:pointer; border-radius:12px; transition:.3s;}
     .gallery-grid img:hover {transform:scale(1.05);}
 
-    /* Lightbox */
     .lightbox {display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.9); justify-content:center; align-items:center; z-index:10000;}
     .lightbox img {max-width:90%; max-height:80%; border-radius:12px;}
     .lightbox .close, .lightbox .prev, .lightbox .next {position:absolute; color:#fff; font-size:2rem; cursor:pointer; user-select:none;}
@@ -102,10 +107,10 @@
     </nav>
   </header>
 
-  <section class="hero" id="home" data-aos="fade-down">
-    <h1 data-aos="fade-down" data-aos-delay="200">Igniting Entrepreneurship</h1>
-    <p data-aos="fade-up" data-aos-delay="400">Welcome to E-Cell, where we inspire, nurture, and empower the next generation of innovators and entrepreneurs.</p>
-    <button class="cta" data-aos="zoom-in" data-aos-delay="600">Join Now</button>
+  <section class="hero" id="home" data-aos="fade-up">
+    <h1>Igniting Entrepreneurship</h1>
+    <p>Welcome to E-Cell, where we inspire, nurture, and empower the next generation of innovators and entrepreneurs.</p>
+    <button class="cta">Join Now</button>
   </section>
 
   <section id="about" data-aos="fade-up">
@@ -116,28 +121,28 @@
   <section id="initiatives" data-aos="fade-up">
     <h2 class="section-title">Our Initiatives</h2>
     <div class="cards">
-      <div class="card" data-aos="zoom-in" data-aos-delay="100"><h3>Startup Incubation</h3><p>Helping student startups grow with guidance and resources.</p></div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="200"><h3>Workshops</h3><p>Hands-on sessions on entrepreneurship, tech, and business skills.</p></div>
-      <div class="card" data-aos="zoom-in" data-aos-delay="300"><h3>Investor Meets</h3><p>Connecting budding entrepreneurs with potential investors.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>Startup Incubation</h3><p>Helping student startups grow with guidance and resources.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>Workshops</h3><p>Hands-on sessions on entrepreneurship, tech, and business skills.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>Investor Meets</h3><p>Connecting budding entrepreneurs with potential investors.</p></div>
     </div>
   </section>
 
   <section id="events" data-aos="fade-up">
     <h2 class="section-title">Events</h2>
     <div class="cards">
-      <div class="card" data-aos="flip-left" data-aos-delay="100"><h3>Pitch Competition</h3><p>Showcase your idea to judges and get feedback.</p></div>
-      <div class="card" data-aos="flip-left" data-aos-delay="200"><h3>Startup Weekend</h3><p>A 48-hour hackathon to build and launch startup ideas.</p></div>
-      <div class="card" data-aos="flip-left" data-aos-delay="300"><h3>Innovation Summit</h3><p>Industry leaders and student entrepreneurs share insights.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="100"><h3>Pitch Competition</h3><p>Showcase your idea to judges and get feedback.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="200"><h3>Startup Weekend</h3><p>A 48-hour hackathon to build and launch startup ideas.</p></div>
+      <div class="card" data-aos="fade-up" data-aos-delay="300"><h3>Innovation Summit</h3><p>Industry leaders and student entrepreneurs share insights.</p></div>
     </div>
   </section>
 
   <section id="gallery" data-aos="fade-up">
     <h2 class="section-title">Gallery</h2>
     <div class="gallery-grid">
-      <img src="" alt="Gallery Image 1" data-aos="zoom-in" data-aos-delay="100">
-      <img src="" alt="Gallery Image 2" data-aos="zoom-in" data-aos-delay="200">
-      <img src="" alt="Gallery Image 3" data-aos="zoom-in" data-aos-delay="300">
-      <img src="" alt="Gallery Image 4" data-aos="zoom-in" data-aos-delay="400">
+      <img src="" alt="Gallery Image 1">
+      <img src="" alt="Gallery Image 2">
+      <img src="" alt="Gallery Image 3">
+      <img src="" alt="Gallery Image 4">
     </div>
   </section>
 
@@ -151,17 +156,17 @@
   <section id="team" data-aos="fade-up">
     <h2 class="section-title">Committee Members</h2>
     <div class="team">
-      <div data-aos="flip-left" data-aos-delay="100">
+      <div data-aos="fade-up" data-aos-delay="100">
         <img src="" alt="Member">
         <h4>Jane Doe</h4>
         <p>President</p>
       </div>
-      <div data-aos="flip-left" data-aos-delay="200">
+      <div data-aos="fade-up" data-aos-delay="200">
         <img src="" alt="Member">
         <h4>John Smith</h4>
         <p>Vice President</p>
       </div>
-      <div data-aos="flip-left" data-aos-delay="300">
+      <div data-aos="fade-up" data-aos-delay="300">
         <img src="" alt="Member">
         <h4>Emily Johnson</h4>
         <p>Event Head</p>
@@ -172,7 +177,7 @@
   <section id="contact" data-aos="fade-up">
     <h2 class="section-title">Contact Us</h2>
     <div class="contact-container">
-      <div class="contact-form" data-aos="fade-right">
+      <div class="contact-form">
         <form>
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
@@ -180,23 +185,21 @@
           <button type="submit">Send Message</button>
         </form>
       </div>
-      <div class="contact-map" data-aos="fade-left">
+      <div class="contact-map">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.962041022917!2d72.87765511540245!3d19.07609088709105!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c6303e111c4f%3A0x64fffc0b4a43c8d5!2sMumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1616403229844!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
       </div>
     </div>
   </section>
 
   <footer data-aos="fade-up" data-aos-once="true">
-  <p>&copy; 2025 E-Cell. All rights reserved.</p>
-</footer>
+    <p>&copy; 2025 E-Cell. All rights reserved.</p>
+  </footer>
 
-
-  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
-      duration: 750,
-      once: false
+      duration: 1000,
+      once: false  // animations repeat on scroll
     });
 
     function toggleMenu(){document.getElementById('navLinks').classList.toggle('showing');}
